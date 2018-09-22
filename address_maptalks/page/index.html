@@ -46,10 +46,10 @@
             }
         });
         //循环测试数据
-        var JsonData=[];
-        function CreateData(){
-            for(var i=0;i<10000;i++){
-                JsonData.push([114.29351810722656+Math.random(),30.564308202441403+Math.random(),15]);
+        var JsonData = [];
+        function CreateData() {
+            for (var i = 0; i < 10000; i++) {
+                JsonData.push([114.29351810722656 + Math.random(), 30.564308202441403 + Math.random(), 15]);
             }
         }
         // //启动计时器
@@ -274,28 +274,28 @@
                     case "heat": layer = AddHeatMap(layerid, TDT_school.features); break;
                 }
             }
-            task?layer.show():layer.hide();
-            layerid=="cluster"?GeoMap.Map._spreadoutLayer.clear():null;
+            task ? layer.show() : layer.hide();
+            layerid == "cluster" ? GeoMap.Map._spreadoutLayer.clear() : null;
         };
         //添加Marker
 
         //加载聚合图
         function AddCluster(layerid, data) {
-            var markers=[];
-            for(var i=0;i<data.length;i++){
-                markers.push(new maptalks.Marker([data[i].geometry.x,data[i].geometry.y]));
+            var markers = [];
+            for (var i = 0; i < data.length; i++) {
+                markers.push(new maptalks.Marker([data[i].geometry.x, data[i].geometry.y]));
             }
-            var layer = new maptalks.ClusterLayer(layerid, markers,{interact:true,markerFile:"../image/marker-blue.png"}).addTo(GeoMap.Map);
+            var layer = new maptalks.ClusterLayer(layerid, markers, { interact: true, markerFile: "../image/marker-blue.png" }).addTo(GeoMap.Map);
             return layer;
         };
         //加载热力图
         function AddHeatMap(layerid, data) {
-            var _data=[];
-            for(var i=0;i<data.length;i++){
-                _data.push([data[i].geometry.x,data[i].geometry.y,15])
+            var _data = [];
+            for (var i = 0; i < data.length; i++) {
+                _data.push([data[i].geometry.x, data[i].geometry.y, 15])
             }
             //option{max:1,radius:25,blur:15}
-            var layer = new maptalks.HeatLayer(layerid, _data,{max:0.2,radius:25,blur:15}).addTo(GeoMap.Map);
+            var layer = new maptalks.HeatLayer(layerid, _data, { max: 0.2, radius: 25, blur: 15 }).addTo(GeoMap.Map);
             return layer;
         };
     </script>

@@ -1,6 +1,6 @@
 var zuel_buildings = {
-	"type": "FeatureCollection",
-	"features": [
+    "type": "FeatureCollection",
+    "features": [
         {
             "id": "126462447",
             "type": "Feature",
@@ -307,7 +307,7 @@ var zuel_buildings = {
                     ]
                 ]
             }
-        },{
+        }, {
             "id": "98842759",
             "type": "Feature",
             "properties": {
@@ -843,7 +843,7 @@ var zuel_buildings = {
                     ]
                 ]
             }
-        },{
+        }, {
             "id": "610179016",
             "type": "Feature",
             "properties": {
@@ -1629,7 +1629,7 @@ var zuel_buildings = {
                     ]
                 ]
             }
-        },{
+        }, {
             "id": "443931340",
             "type": "Feature",
             "properties": {
@@ -1867,7 +1867,7 @@ var zuel_buildings = {
                     ]
                 ]
             }
-        },{
+        }, {
             "id": "246149955",
             "type": "Feature",
             "properties": {
@@ -2319,7 +2319,7 @@ var zuel_buildings = {
                     ]
                 ]
             }
-        },{
+        }, {
             "id": "246149943",
             "type": "Feature",
             "properties": {
@@ -3286,7 +3286,7 @@ var zuel_buildings = {
                     ]
                 ]
             }
-        },{
+        }, {
             "id": "246149988",
             "type": "Feature",
             "properties": {
@@ -4303,7 +4303,7 @@ var zuel_buildings = {
                     ]
                 ]
             }
-        },{
+        }, {
             "id": "610179015",
             "type": "Feature",
             "properties": {
@@ -4603,6 +4603,6 @@ var zuel_buildings = {
             }
         }
 
-        
-	]
+
+    ]
 }

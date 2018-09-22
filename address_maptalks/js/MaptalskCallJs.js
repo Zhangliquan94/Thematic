@@ -53,7 +53,7 @@ var GeoMap = {
                     //cssFilter:"sepia(100%) invert(90%)"//canvas cssFilter
                 });
                 GeoMap.Map = new maptalks.Map(MapId, {
-                    center: [114.29351810722656,30.564308202441403],
+                    center: [114.29351810722656, 30.564308202441403],
                     zoom: 8,//初始化显示层级 可自己更改 
                     minZoom: conf.minZoom,
                     maxZoom: conf.maxZoom,
@@ -61,11 +61,11 @@ var GeoMap = {
                     attribution: false,//去掉logo
                     baseLayer: BaseLayer
                 });
-                var obj={
-                    BaseLayer:BaseLayer,
-                    SpatialReference:spatialReference
+                var obj = {
+                    BaseLayer: BaseLayer,
+                    SpatialReference: spatialReference
                 };
-                GeoMap.MapConfig[url]=obj;
+                GeoMap.MapConfig[url] = obj;
                 GeoMap.Map.on('click', function (e) {
                     console.log(e.coordinate);
                 })
@@ -80,9 +80,9 @@ var GeoMap = {
     //#region 获取瓦片底图配置
     GetTileLayerConfig: function (arcConf) {
         var tileInfo = arcConf['tileInfo'],
-        tileSize = [tileInfo['cols'], tileInfo['rows']],
-        resolutions = [],
-        lods = tileInfo['lods'];
+            tileSize = [tileInfo['cols'], tileInfo['rows']],
+            resolutions = [],
+            lods = tileInfo['lods'];
         for (var i = 0, len = lods.length; i < len; i++) {
             resolutions.push(lods[i]['resolution']);
         }
@@ -170,15 +170,15 @@ var GeoMap = {
             contains: option.contains || true,
             searchFields: option.searchFields || '',
             spatialReference: option.spatialReference || '',
-            layers:option.layers||0,
-            layerDefs:option.layerDefs||'',
-            returnGeometry:option.returnGeometry||true,
-            maxAllowableOffset:option.maxAllowableOffset||'',
-            geometryPrecision:option.geometryPrecision||'',
-            dynamicLayers:option.dynamicLayers||'',
-            returnZ:option.returnZ||false,
-            returnM:option.returnM||false,
-            gdbVersion:option.gdbVersion||''
+            layers: option.layers || 0,
+            layerDefs: option.layerDefs || '',
+            returnGeometry: option.returnGeometry || true,
+            maxAllowableOffset: option.maxAllowableOffset || '',
+            geometryPrecision: option.geometryPrecision || '',
+            dynamicLayers: option.dynamicLayers || '',
+            returnZ: option.returnZ || false,
+            returnM: option.returnM || false,
+            gdbVersion: option.gdbVersion || ''
         };
         for (var p in condition) {
             ParmString += "&" + p + "=" + condition[p];
@@ -230,11 +230,11 @@ var GeoMap = {
     },
     //#endregion
 
-    
+
 
     //#region 地图上添加标注点 数据说明：X经度，Y纬度
-    AddMarker: function (x,y) {
-        if (x&&y) {
+    AddMarker: function (x, y) {
+        if (x && y) {
             var layer = GeoMap.Map.getLayer("MarkerLayer");
             if (!layer) { layer = new maptalks.VectorLayer("MarkerLayer").addTo(GeoMap.Map); }
             layer.clear();
